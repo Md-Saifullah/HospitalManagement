@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.PatientsInformationController">
+    <SplitPane dividerPositions="0.391304347826087" layoutY="5.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <GridPane prefHeight="381.0" prefWidth="449.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="89.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" prefWidth="88.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="10.0" prefWidth="88.0" />
+            </columnConstraints>
+            <rowConstraints>
+            <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label prefHeight="17.0" prefWidth="71.0" text="Name" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label prefHeight="17.0" prefWidth="72.0" text="ID" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label prefHeight="17.0" prefWidth="77.0" text="Admit date" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label prefHeight="17.0" prefWidth="76.0" text="Released date" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Label prefHeight="17.0" prefWidth="76.0" text="Ward Name" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Label prefHeight="17.0" prefWidth="79.0" text="Room #" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <Label prefHeight="17.0" prefWidth="73.0" text="Seat #" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+            <Label prefHeight="17.0" prefWidth="73.0" text="Status" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+            <Button mnemonicParsing="false" onAction="#handleBackButton" prefHeight="25.0" prefWidth="56.0" text="Back" GridPane.halignment="CENTER" GridPane.rowIndex="10">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#handleSearchButton" prefHeight="25.0" prefWidth="74.0" text="Search" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+            <ChoiceBox fx:id="searchChoiceBox" prefHeight="25.0" prefWidth="115.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></ChoiceBox>
+            <TextField fx:id="nameField" prefHeight="26.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+            <cursor>
+               <Cursor fx:constant="TEXT" />
+            </cursor></TextField>
+            <TextField fx:id="idField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+            <cursor>
+               <Cursor fx:constant="TEXT" />
+            </cursor></TextField>
+            <TextField fx:id="wardNameField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+            <TextField fx:id="roomNumberField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+            <TextField fx:id="seatNumberField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+            <DatePicker fx:id="admitDatePicker" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <DatePicker fx:id="releasedDatePicker" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+         <Button mnemonicParsing="false" onAction="#handleRefreshButton" prefHeight="25.0" prefWidth="99.0" text="Refresh" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+         <ChoiceBox fx:id="statusChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="9">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></ChoiceBox>
+         <Label alignment="CENTER" prefHeight="42.0" prefWidth="180.0" text="Patient's Information" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+            <font>
+               <Font size="17.0" />
+            </font>
+         </Label>
+        </GridPane>
+        <TableView fx:id="patientsTable" layoutX="10.0" layoutY="10.0" onMouseClicked="#handleTableSelectAction" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="55.0" text="Name" />
+                <TableColumn fx:id="idColumn" prefWidth="20.0" text="ID" />
+                <TableColumn fx:id="admittedColumn" prefWidth="68.0" text="Admitted" />
+                <TableColumn fx:id="releasedColumn" minWidth="7.0" prefWidth="68.0" text="Released" />
+                <TableColumn fx:id="wardColumn" prefWidth="65.0" text="Ward" />
+                <TableColumn fx:id="roomColumn" prefWidth="46.0" text="Room" />
+                <TableColumn fx:id="seatColumn" prefWidth="36.0" text="Seat" />
+                <TableColumn fx:id="statusColumn" prefWidth="69.0" text="Status" />
+            </columns>
+        </TableView>
+    </SplitPane>
+</AnchorPane>

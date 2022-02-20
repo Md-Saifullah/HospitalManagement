@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.MainMenu">
+   <children>
+      <ImageView fitHeight="365.0" fitWidth="709.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@frontView2.jpg" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="23.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="709.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="0.0" prefWidth="173.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="10.0" prefWidth="82.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="10.0" prefWidth="131.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="10.0" prefWidth="324.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="395.0" minHeight="10.0" prefHeight="146.0" valignment="TOP" />
+            <RowConstraints maxHeight="395.0" minHeight="10.0" prefHeight="60.0" valignment="TOP" />
+            <RowConstraints maxHeight="404.0" minHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="404.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="404.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="428.0" minHeight="0.0" prefHeight="47.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="TOP_CENTER" prefHeight="50.0" prefWidth="294.0" text="Main Menu" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="400.0" text="Welcome to Central Hospital of Tortuga" textFill="#30322e" underline="true" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="10.0" layoutY="410.0" mnemonicParsing="false" onAction="#handlePatientsInformationButton" prefHeight="25.0" prefWidth="128.0" text="Patient's Information" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleLogOutButton" prefHeight="25.0" prefWidth="67.0" text="Log out" GridPane.columnIndex="3" GridPane.halignment="RIGHT">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="187.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleAdmitButton" prefHeight="25.0" prefWidth="128.0" text="Admit Patient" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="253.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleChangePasswordButton" prefHeight="25.0" prefWidth="111.0" text="Change Password" GridPane.halignment="LEFT">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="397.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleReleaseButton" prefHeight="25.0" prefWidth="128.0" text="Release Patient" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="541.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleDoctorsInformationButton" prefHeight="25.0" prefWidth="128.0" text="Doctor's Information" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="addDoctorButton" mnemonicParsing="false" onAction="#handleAddDoctor" prefHeight="25.0" prefWidth="105.0" text="Add Doctor" GridPane.valignment="BOTTOM" />
+            <Button fx:id="addEmployeeButton" mnemonicParsing="false" onAction="#handleAddEmployee" prefHeight="25.0" prefWidth="105.0" text="Add Employee" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
